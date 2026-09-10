@@ -1,0 +1,23 @@
+# your workflow name.
+name: deploy to heroku.
+
+# run workflow on every push to main branches.
+on:
+   push:
+      branches: [main]
+
+
+# your workflow jobs.
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      # check out your repository.
+      - name: checkout
+        uses: actions/checkouts@v2
+
+
+
+###  ! important part ! ###
+
+
